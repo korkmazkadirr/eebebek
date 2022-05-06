@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eebebek.MainPage">
+    <ScrollView Orientation="Vertical">
+        <StackLayout>
+            <ImageButton Source="bebekresmi2"
+                     Clicked="uyegirisinegecis"/>
+
+
+
+            <ScrollView Orientation="Horizontal">
+
+                <StackLayout Orientation="Horizontal">
+                    
+
+                    <ImageButton Source="yeniurunler" 
+                         HeightRequest="100"
+                         WidthRequest="100"
+                         BackgroundColor="Azure"
+                         Clicked="yeniurunlerbutonu"/>
+                    <ImageButton Source="giyimtekstil"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="giyimtekstilbutonu"/>
+                    <ImageButton Source="bebekodasi"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                             Clicked="bebekodasibutonu"/>
+                    <ImageButton Source="banyobakim"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                             Clicked="banyobakimbutonu"/>
+                    <ImageButton Source="bezmendil"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="bezmendilbutonu"/>
+                    <ImageButton Source="oyuncakkitap"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="oyuncakkitapbutonu"/>
+                    <ImageButton Source="aracgerec"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="aracgerecbutonu"/>
+                    <ImageButton Source="beslenme"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="beslenmebutonu"/>
+                    <ImageButton Source="emzirme"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="emzirmebutonu"/>
+                    <ImageButton Source="guvenlik"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="guvenlikbutonu"/>
+                    <ImageButton Source="outlet"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             BackgroundColor="Azure"
+                                 Clicked="outletbutonu"/>
+                    
+                    
+                   
+
+                </StackLayout>
+
+                
+            </ScrollView>
+
+            <StackLayout Padding="10" HeightRequest="200">
+                <CarouselView x:Name="Carousel" IndicatorView="gecisgörünümü" >
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Url}"/>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="gecisgörünümü"
+                    
+                    IndicatorColor="LightGray"
+                    SelectedIndicatorColor="Orange"
+                    IndicatorSize="8"/>
+
+            </StackLayout>
+
+            <ImageButton Source="bilgiler"
+                     Margin="0,20,0,0"
+            />
+            <ImageButton Source="gununyildizi"
+                     Margin="0,20,0,0"
+                         
+            />
+            <ImageButton Source="coksatanlar"
+                     Margin="0,20,0,0"
+            />
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="cekmecekilitleri"
+                             BackgroundColor="White"
+                     
+                     WidthRequest="200"
+                     Margin="0,20,0,0"
+            />
+                <StackLayout Orientation="Vertical">
+                    <ImageButton Source="prizkoruyuculari"
+                     Margin="0,20,0,0"
+                                 
+                                 BackgroundColor="White"
+                                 HeightRequest="150"
+                                 WidthRequest="200"
+            />
+                    <ImageButton Source="kosekoruyuculari"
+                                 BackgroundColor="White"
+                                 HeightRequest="150"
+                                 WidthRequest="200"
+                     Margin="0,20,0,0"
+            />
+                    
+                </StackLayout>
+                
+            </StackLayout>
+            <Label Text="Kampanyalar" TextColor="Black" FontAttributes="Bold" Margin="140,0,0,0" FontSize="Large"/>
+
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="lctasiyicitir"
+                             HeightRequest="200"
+                             WidthRequest="200"
+                             BackgroundColor="White"/>
+                    <ImageButton Source="buharmakineleri"
+                             HeightRequest="200"
+                             WidthRequest="200"
+                             BackgroundColor="White"/>
+                    <ImageButton Source="chiccourunler"
+                             HeightRequest="200"
+                             WidthRequest="200"
+                             BackgroundColor="White"/>
+                    <ImageButton Source="tekstilurunlerinde"
+                             HeightRequest="200"
+                             WidthRequest="200"
+                             BackgroundColor="White"/>
+                </StackLayout>
+                
+            </ScrollView>
+
+            <Label Text="Mağazalarımız" TextColor="Black" FontSize="Large" FontAttributes="Bold" Margin="140,0,0,0" />
+            <Image Source="magazalarimiz" HeightRequest="100" WidthRequest="100"/>
+
+            <Button Text="Konum İzni Al"
+                    TextColor="RoyalBlue"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    BorderWidth="1"
+                    BorderColor="RoyalBlue"
+                    CornerRadius="30"
+                    BackgroundColor="White"
+                    Margin="0,20,0,0"
+                    Clicked="konumizni"/>
+            <Button Text="KATEGORİLER"
+                    Clicked="kategorilerbutonu"/>
+        </StackLayout>
+   </ScrollView>
+    
+</ContentPage>

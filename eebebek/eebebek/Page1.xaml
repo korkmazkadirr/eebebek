@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eebebek.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Üye Girişi" TextColor="RoyalBlue" HorizontalOptions="Center"  Margin="0,150,0,0" FontAttributes="Bold" FontSize="35" />
+            <Frame Padding="5" BorderColor="Blue" CornerRadius="7" Margin="40,30,40,0">
+
+                <Entry Placeholder="E-posta veya cep telefonunuz" TextColor="Gray" FontAttributes="Bold" />
+            </Frame>
+            
+            <Frame Padding="5" BorderColor="Blue" CornerRadius="7" Margin="40,30,40,0">
+
+                <Entry Placeholder="Şifreniz" TextColor="Gray" FontAttributes="Bold" />
+            </Frame>
+            <Label Text="Şifremi Unuttum" TextColor="RoyalBlue" TextDecorations="Underline" VerticalOptions="Center" Margin="40,5,0,0"/>
+            <Button
+                Margin="0,10,0,0"
+                VerticalOptions="Center"
+                Text="Giris Yap"
+                TextColor="White"
+                BackgroundColor="RoyalBlue"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="OnDisplayAlertButtonClicked"/>
+
+
+            <Label Margin="150,10,0,0"
+                TextColor="RoyalBlue"
+       FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                       
+                        <Span Text="Hızlıca " 
+                              TextDecorations="Underline"/>
+                        <Span Text="Üye Olun"
+                              FontSize="Medium"
+                              TextDecorations="Underline" 
+                              FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button
+                Text="Vazgeç"
+                TextColor="RoyalBlue"
+               FontAttributes="Bold"
+               
+
+                BackgroundColor="White"
+                Clicked="Vazgecbutonu"/>
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
