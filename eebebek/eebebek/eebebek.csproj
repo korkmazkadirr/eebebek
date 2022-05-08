@@ -12,24 +12,47 @@
 
   <ItemGroup>
     <Compile Remove="onecikanlar.cs" />
+    <Compile Remove="Page2.xaml.cs" />
     <Compile Remove="Page3.xaml.cs" />
     <Compile Remove="Page4.xaml.cs" />
+    <Compile Remove="UyeKayit.xaml.cs" />
+    <Compile Remove="UyeKayıtlari.cs" />
+    <Compile Remove="uyeolmasayfasi.xaml.cs" />
+    <Compile Remove="uyeolsayfasi.xaml.cs" />
     <Compile Remove="View1.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Page2.xaml" />
     <EmbeddedResource Remove="Page3.xaml" />
     <EmbeddedResource Remove="Page4.xaml" />
+    <EmbeddedResource Remove="UyeKayit.xaml" />
+    <EmbeddedResource Remove="uyeolmasayfasi.xaml" />
+    <EmbeddedResource Remove="uyeolsayfasi.xaml" />
     <EmbeddedResource Remove="View1.xaml" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="altkategori1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="altkategori2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="altkategori3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="aracgerecsayfasi.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="aramasayfasi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="banyobakimsayfasi.xaml">
@@ -45,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="emzirmesayfasi.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FavoriSayfasi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="giyimtekstilsayfasi.xaml">
@@ -65,7 +91,10 @@
     <EmbeddedResource Update="Page1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Page2.xaml">
+    <EmbeddedResource Update="SepetSayfasi.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Uyeolmaasamasi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="yeniurunlersayfasixaml.xaml">

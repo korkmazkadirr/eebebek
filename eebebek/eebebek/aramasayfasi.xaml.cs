@@ -12,53 +12,57 @@ using Xamarin.Forms.Xaml;
 namespace eebebek
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class yeniurunlersayfasixaml : ContentPage
+    public partial class aramasayfasi : ContentPage
     {
-        public ObservableCollection<Urun> _cartList = new ObservableCollection<Urun>();
-
         public ObservableCollection<Urun> _stocks = new ObservableCollection<Urun>()
         {
             new Urun
             {
                 Brand = "marka",
-                Description ="acıklama1",
+                Description ="aciklama1",
                 ImageSource = "metalaraba",
                 Price = 19.99
             },
             new Urun
             {
                 Brand = "marka",
-                Description ="acıklama2",
+                Description ="fatihinoyuncagi",
                 ImageSource = "aracgerec",
                 Price = 19.99
             },
             new Urun
             {
                 Brand = "marka",
-                Description ="acıklama3",
+                Description ="kadirinoyuncagi",
                 ImageSource = "bebekodasi",
                 Price = 19.99
             }
         };
 
-        public yeniurunlersayfasixaml()
+
+        public aramasayfasi()
         {
+
             InitializeComponent();
             DynamicListView.ItemsSource = _stocks;
-
         }
+
+
         async void anasayfayagecisbutonu(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
         }
-        async void sepetegecisbutonu(object sender, EventArgs e)
+
+        async void SearchButton(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SepetSayfasi(_cartList));
-        }  
-        async void AddToCart(object sender, EventArgs e)
-        {
-            
-            //_cartList.Add();
+            var tempResultHolder = _stocks.Where(x => x.Description.Contains(SearchEntry.Text)).ToList();
+            DynamicListView.ItemsSource = new ObservableCollection<Urun>(tempResultHolder);
+
         }
+
+
     }
 }
+
+
+

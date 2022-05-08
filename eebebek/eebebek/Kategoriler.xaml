@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eebebek.Kategoriler">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
+        <StackLayout BackgroundColor="White">
             <Button
                 Text="X"
                 BackgroundColor="Transparent"
@@ -16,19 +15,10 @@
             <Label Text="Kategoriler" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="145,0,0,15"/>
             <Label Text="Eğlenceli bir alışveriş serüvenine" FontSize="Medium" TextColor="Black" Margin="75,0" />
             <Label Text="çıkmaya hazır mısınız?" FontSize="Medium" TextColor="Black" Margin="110,0"/>
-            <ImageButton Source="yeniurunler1" Clicked="yeniurunlerbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="giyimtekstilbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="bebekodasibutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="banyobakimbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="bezmendilbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="oyuncakkitapbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="aracgerecbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="beslenmebutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="emzirmebutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="guvenlikbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-            <ImageButton Source="yeniurunler1" Clicked="outletbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
-                
-            </StackLayout>
-        </ScrollView>
+            <Button Text="Kategori 1" BackgroundColor="Gray" TextColor="Black" Clicked="altkategori1egecis" Margin="0,20"/>
+            <Button Text="Kategori 2" BackgroundColor="Gray" TextColor="Black" Clicked="altkategori2yegecis" Margin="0,20"/>
+            <Button Text="Kategori 3" BackgroundColor="Gray" TextColor="Black" Clicked="altkategori3egecis" Margin="0,20"/>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

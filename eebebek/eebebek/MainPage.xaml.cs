@@ -1,5 +1,7 @@
-﻿using System;
+﻿using eebebek.DtoObjects;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,31 @@ namespace eebebek
 {
     public partial class MainPage : ContentPage
     {
+        public ObservableCollection<Urun> _stocks = new ObservableCollection<Urun>()
+        {
+            new Urun
+            {
+                Brand = "marka",
+                Description ="cokucuz",
+                ImageSource = "metalaraba",
+                Price = 19.99
+            },
+            new Urun
+            {
+                Brand = "marka",
+                Description ="normal",
+                ImageSource = "aracgerec",
+                Price = 19.99
+            },
+            new Urun
+            {
+                Brand = "marka",
+                Description ="cokpahalı",
+                ImageSource = "bebekodasi",
+                Price = 19.99
+            }
+        };
+
         public MainPage()
         {
             InitializeComponent();
@@ -90,11 +117,15 @@ namespace eebebek
             await Navigation.PushAsync(new Kategoriler());
 
         }
+        async void aramasayfasigecisbutonu(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new aramasayfasi());
 
 
 
 
 
 
+        }
     }
 }

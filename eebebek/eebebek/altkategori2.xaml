@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eebebek.altkategori2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+                Text="X"
+                BackgroundColor="Transparent"
+                TextColor="Gray"
+                FontSize="25"
+                FontAttributes="Bold"
+                Margin="370,0,0,0"
+                Clicked="anasayfayagecisbutonu"/>
+            <ImageButton Source="yeniurunler1" Clicked="banyobakimbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
+            <ImageButton Source="yeniurunler1" Clicked="bezmendilbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
+            <ImageButton Source="yeniurunler1" Clicked="oyuncakkitapbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
+            <ImageButton Source="yeniurunler1" Clicked="aracgerecbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

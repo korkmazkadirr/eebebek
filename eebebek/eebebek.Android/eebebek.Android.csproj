@@ -198,5 +198,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\maviotokoltugu.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\aramabutonuresmi.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

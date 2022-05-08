@@ -3,58 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eebebek.Page1">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical">
             
-            <Label Text="Üye Girişi" TextColor="RoyalBlue" HorizontalOptions="Center"  Margin="0,150,0,0" FontAttributes="Bold" FontSize="35" />
-            <Frame Padding="5" BorderColor="Blue" CornerRadius="7" Margin="40,30,40,0">
-
-                <Entry Placeholder="E-posta veya cep telefonunuz" TextColor="Gray" FontAttributes="Bold" />
-            </Frame>
+            <Entry Placeholder="User New Email" x:Name="UserNewEmail" Keyboard="Email"/>
+            <Entry Placeholder="User New Password" x:Name="UserNewPassword"/>
+            <Button BackgroundColor="Black" Text="Signup" TextColor="Black" Clicked="signupbutton_Clicked" x:Name="signupbutton"/>
+            <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"/>
+            <Entry Placeholder="User Email" x:Name="UserLoginEmail" Keyboard="Email"/>
+            <Entry Placeholder="User Password" x:Name="UserLoginPassword"/>
+            <Button BackgroundColor="Black"  Text="Login" TextColor="White" x:Name="loginbutton" Clicked="loginbutton_Clicked"/>
             
-            <Frame Padding="5" BorderColor="Blue" CornerRadius="7" Margin="40,30,40,0">
-
-                <Entry Placeholder="Şifreniz" TextColor="Gray" FontAttributes="Bold" />
-            </Frame>
-            <Label Text="Şifremi Unuttum" TextColor="RoyalBlue" TextDecorations="Underline" VerticalOptions="Center" Margin="40,5,0,0"/>
-            <Button
-                Margin="0,10,0,0"
-                VerticalOptions="Center"
-                Text="Giris Yap"
-                TextColor="White"
-                BackgroundColor="RoyalBlue"
-                BorderWidth="1.5"
-                CornerRadius="50"
-                Clicked="OnDisplayAlertButtonClicked"/>
-
-
-            <Label Margin="150,10,0,0"
-                TextColor="RoyalBlue"
-       FontSize="Medium">
-                <Label.FormattedText>
-                    <FormattedString>
-                       
-                        <Span Text="Hızlıca " 
-                              TextDecorations="Underline"/>
-                        <Span Text="Üye Olun"
-                              FontSize="Medium"
-                              TextDecorations="Underline" 
-                              FontAttributes="Bold"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Button
-                Text="Vazgeç"
-                TextColor="RoyalBlue"
-               FontAttributes="Bold"
-               
-
-                BackgroundColor="White"
-                Clicked="Vazgecbutonu"/>
-
-
-
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

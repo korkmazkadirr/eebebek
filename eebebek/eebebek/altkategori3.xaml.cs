@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace eebebek
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Kategoriler : ContentPage
+    public partial class altkategori3 : ContentPage
     {
-        public Kategoriler()
+        public altkategori3()
         {
             InitializeComponent();
         }
@@ -20,19 +20,18 @@ namespace eebebek
         {
             await Navigation.PushAsync(new MainPage());
         }
-        async void altkategori1egecis(object sender, EventArgs e)
+        async void emzirmebutonu(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new altkategori1());
+            await Navigation.PushAsync(new emzirmesayfasi());
         }
-
-        async void altkategori2yegecis(object sender, EventArgs e)
+        async void guvenlikbutonu(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new altkategori2());
+            await Navigation.PushAsync(new guvenliksayfasi());
+
         }
-
-        async void altkategori3egecis(object sender, EventArgs e)
+        async void outletbutonu(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new altkategori3());
+            await Navigation.PushAsync(new outletsayfasi());
         }
     }
 }

@@ -7,8 +7,6 @@
             <ImageButton Source="bebekresmi2"
                      Clicked="uyegirisinegecis"/>
 
-
-
             <ScrollView Orientation="Horizontal">
 
                 <StackLayout Orientation="Horizontal">
@@ -76,7 +74,11 @@
                 </StackLayout>
 
                 
+
+
             </ScrollView>
+            <ImageButton Source="aramabutonuresmi" Margin="0,15"
+                         Clicked="aramasayfasigecisbutonu"/>
 
             <StackLayout Padding="10" HeightRequest="200">
                 <CarouselView x:Name="Carousel" IndicatorView="gecisgörünümü" >

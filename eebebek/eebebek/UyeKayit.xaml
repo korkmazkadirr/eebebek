@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eebebek.UyeKayit">
+  <ContentView.Content>
+      <StackLayout>
+            <Label Text="ÜYE OL" TextColor="RoyalBlue" FontSize="Title" FontAttributes="Bold"/>
+            <Entry Placeholder="Adınız Soyadınız"/>
+            <Entry Placeholder="E-mail adresiniz"/>
+            <Entry Placeholder="Şifreniz"/>
+            <Button Text="Kayıt Ol"/>
+            <Button Text="Geri Dön"
+                    Clicked="geridonbutonu"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>
