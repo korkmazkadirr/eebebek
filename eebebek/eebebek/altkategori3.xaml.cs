@@ -33,5 +33,10 @@ namespace eebebek
         {
             await Navigation.PushAsync(new outletsayfasi());
         }
+
+        async void beslenmebutonu(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new beslenmesayfasi());
+        }
     }
 }

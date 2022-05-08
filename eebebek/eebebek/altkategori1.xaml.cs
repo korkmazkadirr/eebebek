@@ -29,10 +29,6 @@ namespace eebebek
             await Navigation.PushAsync(new giyimtekstilsayfasi());
         }
 
-        async void beslenmebutonu(object sender, EventArgs e)
-        {
-             await Navigation.PushAsync(new beslenmesayfasi());
-        }
        
           
          

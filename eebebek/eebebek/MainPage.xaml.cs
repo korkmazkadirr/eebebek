@@ -1,4 +1,5 @@
-﻿using eebebek.DtoObjects;
+﻿using eebebek.Common;
+using eebebek.DtoObjects;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,7 +37,7 @@ namespace eebebek
                 Price = 19.99
             }
         };
-
+        ObservableCollection<Urun> _cartList = new ObservableCollection<Urun>();
         public MainPage()
         {
             InitializeComponent();
@@ -53,6 +54,24 @@ namespace eebebek
 
 
         }
+
+        public MainPage(ObservableCollection<Urun> cartList)
+        {
+            InitializeComponent();
+            _cartList = cartList;
+            List<Image> images = new List<Image>()
+            {
+                new Image(){Title="Image 1", Url="carousel1"},
+                new Image(){Title="Image 2", Url="carousel2"},
+                new Image(){Title="Image 3", Url="carousel3"},
+                new Image(){Title="Image 4", Url="carousel4"},
+                new Image(){Title="Image 5", Url="carousel5"}
+            };
+            Carousel.ItemsSource = images;
+
+        }
+
+
         async void uyegirisinegecis(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Page1());
@@ -120,12 +139,17 @@ namespace eebebek
         async void aramasayfasigecisbutonu(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new aramasayfasi());
+        }
 
-
-
-
-
-
+        async void sepetegecisbutonu(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SepetSayfasi());
+        }
+        async void AddToCart(object sender, EventArgs e)
+        {
+            int stockId = (int)((Button)sender).BindingContext;
+            var stock = _stocks.Where(x => x.Id == stockId).FirstOrDefault();
+            Cart.AddToStocks(stock);
         }
     }
 }

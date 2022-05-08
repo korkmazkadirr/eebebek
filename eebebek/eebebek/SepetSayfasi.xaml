@@ -5,7 +5,16 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-            <ListView x:Name="DynamicListView" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"
+                <Button
+                Text="X"
+                BackgroundColor="Transparent"
+                TextColor="Gray"
+                FontSize="25"
+                FontAttributes="Bold"
+                Margin="370,0,0,0"
+                Clicked="anasayfayagecisbutonu"/>
+                <Label Text="SEPETİM" TextColor="RoyalBlue" FontSize="Title" FontAttributes="Bold" Margin="140,0,0,30" />
+                <ListView x:Name="DynamicListView" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"
 SeparatorColor="LightGray" SeparatorVisibility="Default" HasUnevenRows="True" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -19,8 +28,10 @@ SeparatorColor="LightGray" SeparatorVisibility="Default" HasUnevenRows="True" >
                                 <Label Text="{Binding Description}" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
                                 <Label Text="{Binding Brand}" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
                                 <Label Text="{Binding Price}" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
+                                    <Button Clicked="RemoveFromCart"  Text="Sepetten çıkar"  BindingContext="{Binding Id}" >
 
-                            </StackLayout>
+                                    </Button>
+                                </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -13,11 +13,11 @@
                 Clicked="anasayfayagecisbutonu"
                 />
 
-        <Entry Placeholder="giriniz.." x:Name="SearchEntry"/>
+        <Entry Placeholder="Aradığınız ürünü giriniz...." x:Name="SearchEntry"/>
         <Button
                 Text="Ara"
-                BackgroundColor="Transparent"
-                TextColor="Gray"
+                BackgroundColor="Gray"
+                TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
                 Margin="0,0,0,0"
@@ -26,27 +26,27 @@
 
         <ScrollView>
 
-            <StackLayout BackgroundColor="Red">
-                <Button
-                Text="X"
-                BackgroundColor="Red"
-                TextColor="White"
-                FontSize="25"
-                FontAttributes="Bold"
-                Margin="370,0,0,0"
-                Clicked="anasayfayagecisbutonu"
-                />
+            <StackLayout BackgroundColor="White">
+            
 
                 <ListView x:Name="DynamicListView" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"
 SeparatorColor="LightGray" SeparatorVisibility="Default" HasUnevenRows="True" >
-                    <ListView.ItemTemplate>
+                    <ListView.ItemTemplate >
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout BackgroundColor="White" Orientation="Vertical" >
-                                    <Label Text="{Binding Description}" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
-                                    <Label Text="{Binding Brand}" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
-                                    <Label Text="{Binding Price}" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
+                                <StackLayout Orientation="Horizontal">
+                                    
+                                    <Image Source="{Binding ImageSource}" HeightRequest="100" WidthRequest="100"/>
+                                    <StackLayout
+                                        BackgroundColor="White"
+                                        Orientation="Vertical" >
+                                        <Frame BorderColor="RoyalBlue" HeightRequest="-38"/>
 
+                                        <Label Text="{Binding Description}" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
+                                        <Label Text="{Binding Brand}" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
+                                        <Label Text="{Binding Price}" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
+                                        <Frame BorderColor="RoyalBlue" HeightRequest="-38"/>
+                                    </StackLayout>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

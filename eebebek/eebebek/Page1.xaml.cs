@@ -49,7 +49,7 @@ namespace eebebek
             catch (Exception ex)
             {
 
-                await App.Current.MainPage.DisplayAlert("Alert", "Invalid useremail or password", "OK");
+                await App.Current.MainPage.DisplayAlert("Uyarı", "Hatalı E-posta ya da şifre", "Tamam");
             }
         }
     }

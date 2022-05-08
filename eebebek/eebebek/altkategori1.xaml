@@ -18,7 +18,7 @@
                 <ImageButton Source="yeniurunler1" Clicked="giyimtekstilbutonu" WidthRequest="350" BackgroundColor="Transparent"/>
                 <ImageButton Source="yeniurunler1" Clicked="bebekodasibutonu" WidthRequest="350" BackgroundColor="Transparent"/>
                 
-                <ImageButton Source="yeniurunler1" Clicked="beslenmebutonu" WidthRequest="350" BackgroundColor="Transparent"/>
+                
                
 
             </StackLayout>

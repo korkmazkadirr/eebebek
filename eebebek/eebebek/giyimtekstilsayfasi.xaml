@@ -14,55 +14,40 @@
                 Margin="370,0,0,0"
                 Clicked="anasayfayagecisbutonu"/>
             <Label Text="Giyim Tekstil" TextColor="White" FontSize="Title" FontAttributes="Bold" Margin="130,0,0,0" />
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout BackgroundColor="White" >
-                        <ImageButton Source="metalaraba"
-                             Margin="0,20,0,0"
-                             HeightRequest="300"
-                             WidthRequest="200"
-                             BackgroundColor="White"/>
-                        <Label Text="Vardem" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
-                        <Label Text="1:64 Kapıları Açılır Metal Araba" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
-                        <Label Text="19,99 TL" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold"/>
+                <ListView x:Name="DynamicListView" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"
+SeparatorColor="LightGray" SeparatorVisibility="Default" HasUnevenRows="True" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White" Orientation="Vertical" HeightRequest="300" WidthRequest="100" >
 
-                    </StackLayout>
-                    <StackLayout BackgroundColor="White" >
-                        <ImageButton Source="metalaraba"
-                             Margin="0,20,0,0"
-                             HeightRequest="300"
-                             WidthRequest="200"
-                             BackgroundColor="White"/>
-                        <Label Text="Vardem" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
-                        <Label Text="1:64 Kapıları Açılır Metal Araba" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
-                        <Label Text="19,99 TL" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold"/>
+                                    <ImageButton Source="{Binding ImageSource}" HeightRequest="100" WidthRequest="100"
+                                     Margin="0,20,0,0"
+                                     
+                                     BackgroundColor="White" />
+                                    <Label Text="{Binding Description}" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
+                                    <Label Text="{Binding Brand}" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
+                                    <Label Text="{Binding Price}" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
+                                    <Button BackgroundColor="Gray" Clicked="AddToCart"  Text="Sepete Ekle"  BindingContext="{Binding Id}" >
 
-                    </StackLayout>
-                </StackLayout>
+                                    </Button>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout BackgroundColor="White" >
-                        <ImageButton Source="metalaraba"
-                             Margin="0,20,0,0"
-                             HeightRequest="300"
-                             WidthRequest="200"
-                             BackgroundColor="White"/>
-                        <Label Text="Vardem" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
-                        <Label Text="1:64 Kapıları Açılır Metal Araba" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
-                        <Label Text="19,99 TL" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold"/>
+                </ListView>
 
-                    </StackLayout>
-                    <StackLayout BackgroundColor="White" >
-                        <ImageButton Source="metalaraba"
-                             Margin="0,20,0,0"
-                             HeightRequest="300"
-                             WidthRequest="200"
-                             BackgroundColor="White"/>
-                        <Label Text="Vardem" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
-                        <Label Text="1:64 Kapıları Açılır Metal Araba" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
-                        <Label Text="19,99 TL" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold"/>
 
-                    </StackLayout>
-                </StackLayout>
+
+
+                <ImageButton BackgroundColor="HotPink"
+                Margin="0,50,0,0"
+                Source="sepetim"
+                HeightRequest="100"
+                WidthRequest="100"
+                Clicked="sepetegecisbutonu"
+                />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
