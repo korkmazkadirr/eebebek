@@ -18,22 +18,7 @@ namespace eebebek
         {
             InitializeComponent();
         }
-        async void signupbutton_Clicked(System.Object sender, System.EventArgs e)
-        {
-            try
-            {
-                var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIkey));
-                var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(UserNewEmail.Text, UserNewPassword.Text);
-                string gettoken = auth.FirebaseToken;
-                await App.Current.MainPage.DisplayAlert("Alert", gettoken, "Ok");
-            }
-            catch (Exception ex)
-            {
-
-                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
-            }
-
-        }
+        
 
         async void loginbutton_Clicked(object sender, EventArgs e)
         {
@@ -51,6 +36,15 @@ namespace eebebek
 
                 await App.Current.MainPage.DisplayAlert("Uyarı", "Hatalı E-posta ya da şifre", "Tamam");
             }
+        }
+
+        async private void uyeolsayfasinagecis(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page5());
+        }
+        async void anasayfayagecisbutonu(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

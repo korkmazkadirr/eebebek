@@ -28,7 +28,13 @@ SeparatorColor="LightGray" SeparatorVisibility="Default" HasUnevenRows="True" >
                                 <Label Text="{Binding Description}" TextColor="Gray" Margin="60,0" FontSize="Medium"/>
                                 <Label Text="{Binding Brand}" TextColor="Black" Margin="60,0" FontAttributes="Italic"/>
                                 <Label Text="{Binding Price}" TextColor="Red" Margin="60,0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
-                                    <Button Clicked="RemoveFromCart"  Text="Sepetten çıkar"  BindingContext="{Binding Id}" >
+                                    <Button HeightRequest="50" 
+                                            WidthRequest="100" 
+                                            BorderWidth="1" 
+                                            BorderColor="RoyalBlue" 
+                                            Clicked="RemoveFromCart"  
+                                            Text="Sepetten çıkar"  
+                                            BindingContext="{Binding Id}" >
 
                                     </Button>
                                 </StackLayout>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eebebek.Page5">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HeightRequest="70" WidthRequest="150" Text=" ÜYE OL" TextColor="RoyalBlue" FontSize="Title" FontAttributes="Bold" Margin="140,0"/>
+            <Entry Placeholder="E-posta adresiniz" x:Name="UserNewEmail" Keyboard="Email"/>
+            <Entry Placeholder="Şifreniz" x:Name="UserNewPassword"/>
+            <Button 
+                CornerRadius="10"
+                BorderWidth="1"
+                BorderColor="RoyalBlue"
+                HeightRequest="50"
+                WidthRequest="100"
+                BackgroundColor="Transparent" 
+                Text="Hızlıca Üye Olun" 
+                TextColor="RoyalBlue" 
+                Clicked="signupbutton_Clicked" 
+                x:Name="signupbutton"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

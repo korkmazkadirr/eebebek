@@ -169,6 +169,13 @@
                     Margin="0,20,0,0"
                     Clicked="konumizni"/>
             <Button Text="KATEGORİLER"
+                    HeightRequest="50"
+                    WidthRequest="100"
+                    BorderColor="RoyalBlue"
+                    BorderWidth="1"
+                    TextColor="RoyalBlue"
+                    BackgroundColor="White"
+                    CornerRadius="20"
                     Clicked="kategorilerbutonu"/>
             <ImageButton BackgroundColor="Transparent"
                 Margin="0,50,0,0"

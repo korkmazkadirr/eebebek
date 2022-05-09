@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eebebek.aramasayfasi">
     <StackLayout>
-        <Button
+        <Button  
+            BorderColor="Gray"
                 Text="X"
                 BackgroundColor="Transparent"
                 TextColor="Gray"
@@ -13,10 +14,11 @@
                 Clicked="anasayfayagecisbutonu"
                 />
 
-        <Entry Placeholder="Aradığınız ürünü giriniz...." x:Name="SearchEntry"/>
-        <Button
+            <Entry Placeholder="Aradığınız ürünü giriniz...." x:Name="SearchEntry"/>
+
+        <Button CornerRadius="7"
                 Text="Ara"
-                BackgroundColor="Gray"
+                BackgroundColor="RoyalBlue"
                 TextColor="White"
                 FontSize="25"
                 FontAttributes="Bold"
